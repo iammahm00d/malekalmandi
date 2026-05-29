@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: flex-end;
+  background: #FFECD1;
+  font-family: 'Cairo', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.hero {
+  text-align: center;
+  font-family: 'Kufam', sans-serif;
+}
+
+.hero h1,
+.hero h2,
+.hero h4 {
+  font-family: 'Kufam', sans-serif;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin-bottom: 6px;
+  font-size: 32px;
+}
+
+.hero h2 {
+  margin-bottom: 7px;
+  font-size: 30px;
+}
+
+.hero h4 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.hero p {
+  color: #777;
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.link-btn {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  background: #b22222;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  color: #FFECD1;
+  font-family: 'Cairo', sans-serif;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.link-btn:hover,
+.link-btn:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+.link-btn:focus-visible {
+  outline: 3px solid rgba(178, 34, 34, 0.35);
+  outline-offset: 3px;
+}
+
+.row .link-btn {
+  justify-content: center;
+  padding: 14px;
+}
+
+.btn-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.row .btn-left {
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.tiktok,
+.call {
+  background: #b22222;
+}
+
+.footer {
+  margin-top: 12px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+
+@media (max-width: 360px) {
+  .row {
+    gap: 10px;
+  }
+
+  .link-btn {
+    padding: 14px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero h2 {
+    font-size: 27px;
+  }
+}
